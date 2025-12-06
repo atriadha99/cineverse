@@ -6,12 +6,14 @@ import Banner from '@/components/Banner';
 import Row from '@/components/Row';
 import ArchiveRow from '@/components/ArchiveRow';
 import requests from '@/utils/requests';
+import CustomRow from '@/components/CustomRow';
 
 export default function Home() {
   return (
     <Box pb={10} overflow="hidden"> 
       <Navbar />
       <Banner />
+      <CustomRow title="TemuScene Uploads" />
       <ArchiveRow title="Classic Cinema Vault" />
       
       {/* KATEGORI UTAMA */}

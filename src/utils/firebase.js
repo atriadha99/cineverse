@@ -1,6 +1,7 @@
 // src/utils/firebase.js
 import { initializeApp, getApps, getApp } from "firebase/app";
 import { getAuth } from "firebase/auth";
+import { getFirestore } from "firebase/firestore"; // <--- TAMBAH INI
 
 // Konfigurasi Firebase kamu
 const firebaseConfig = {
@@ -23,3 +24,4 @@ const app = !getApps().length ? initializeApp(firebaseConfig) : getApp();
 
 // Kita export 'auth' supaya bisa dipakai di AuthContext
 export const auth = getAuth(app);
+export const db = getFirestore(app); // <--- TAMBAH INI (Database)
